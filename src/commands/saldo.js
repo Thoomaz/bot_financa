@@ -1,5 +1,5 @@
-const pool = require("../config/db");
-const axios = require("axios");
+const pool = require('../config/db');
+const axios = require('axios');
 
 const TEL_API = `https://api.telegram.org/bot${process.env.TEL_TOKEN}`;
 

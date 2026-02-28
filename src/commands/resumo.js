@@ -1,5 +1,5 @@
-const pool = require("../config/db");
-const axios = require("axios");
+const pool = require('../config/db');
+const axios = require('axios');
 
 const TEL_API = `https://api.telegram.org/bot${process.env.TEL_TOKEN}`;
 
@@ -8,7 +8,7 @@ async function handleResumo(message) {
   const userId = message.from.id;
   const text = message.text.trim();
 
-  const parts = text.split(" ");
+  const parts = text.split(' ');
 
   let dataReferencia;
 
@@ -22,7 +22,7 @@ async function handleResumo(message) {
     if (!regex.test(input)) {
       return axios.post(`${TEL_API}/sendMessage`, {
         chat_id: chatId,
-        text: "Use o formato:\n/resumo 2025-02",
+        text: 'Use o formato:\n/resumo 2025-02',
       });
     }
 
